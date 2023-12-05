@@ -1,0 +1,423 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_content {
+    max-width: 1920px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main_content a {
+    padding: 0;
+}
+
+
+
+/***** ГЛАВНАЯ СТРАНИЦА *****/
+.main_screen {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+/* Лого */
+.main_screen_logo {
+    position: absolute;
+    transform: translate(-50%, 0);
+    top: 0;
+    left: 50%;
+    z-index: 5;
+}
+
+.main_screen_logo img{
+    margin-top: 20px;
+}
+
+/* Кнопки главного экрана */
+.actors_btns {
+    z-index: 1;
+    display: flex;
+    height: 100%;
+}
+
+.left_actors_btn_container,
+.right_actors_btn_container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.left_actors_btn_bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.9006068980326506) 0%, rgba(0,0,0,0.7465452733827906) 25%, rgba(0,0,0,0.502847794391194) 50%, rgba(0,0,0,0.245144713158701) 75%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: .5s;
+}
+
+.right_actors_btn_bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-90deg, rgba(0,0,0,0.9006068980326506) 0%, rgba(0,0,0,0.7465452733827906) 25%, rgba(0,0,0,0.502847794391194) 50%, rgba(0,0,0,0.245144713158701) 75%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: .5s;
+}
+
+.left_actors_btn_bg:has(~ .left_btn:hover) {
+    opacity: 1;
+}
+
+.right_actors_btn_bg:has(~ .right_btn:hover) {
+    opacity: 1;
+}
+
+.left_btn,
+.right_btn {
+    border: 0;
+    position: relative;
+    z-index: 3;
+    font-family: Murs Gothic;
+    color: #FFF;
+    font-size: 34px;
+}
+
+
+/* Фон главного экрана */
+.background{
+    width: 100%;
+    height: 100%;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../../img/main_page/water_background.gif) no-repeat;
+    background-size: cover;
+    filter: blur(11px);
+    z-index: -1;
+}
+
+
+/* КОНТАКТЫ */
+.contacts {
+    width: 100%;
+    margin-top: 45px;
+    padding-top: 20px;
+}
+
+
+/* Заголовок блока контактов */
+.title_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts_title {
+    color: #FFF;
+    font-family: Murs Gothic;
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+
+/* Основной контент контактов */
+.contacts_content {
+    width: 100%;
+    height: 100%;
+    margin: 7% 0 7% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Аватарка раздела контактов */
+.contacts_img {
+    width: 50%;
+    margin: 0 5% 0 5%;
+    text-align: center;
+}
+
+.contacts_img img {
+    max-width: 422px;
+    border-radius: 50%;
+}
+
+
+/* Информационный блок контактов  - заголовок и текст*/
+.contacts_inf {
+    width: 50%;
+    padding-right: 10%;
+}
+
+.contacts_inf_title {
+    color: #FFF;
+    font-family: Murs Gothic;
+    font-size: 35px;
+    margin-bottom: 16px;
+}
+
+.contacts_inf a {
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+    font-size: 25px;
+}
+
+.contacts_inf_text {
+    color: #828282;
+}
+
+
+/* Информационный блок контактов - почта и телефон */
+.contacts_address_container {
+    margin-top: 10%;
+}
+
+.contacts_address_container img {
+    padding-right: 15px;
+}
+
+.contacts_address_mail {
+    display: flex;
+
+}
+
+.contacts_address_phone {
+    display: flex;
+
+}
+
+
+
+/***** КНОПКА "НАВЕРХ" *****/
+.up_btn a {
+    margin: 0;
+}
+
+.up_btn_hide {
+    display: none;
+}
+
+.up_btn_container {
+    display: flex;
+    width: 160px;
+    height: 35px;
+    background-color: #309bbf;
+    z-index: 5;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    border: 0;
+    border-radius: 3px;
+}
+
+.up_btn_text {
+    font-family: 'Baron Neue Regular', sans-serif;
+    font-size: 25px;
+    color: #000;
+    margin: 0 10px 0 10px;
+}
+
+.up_btn_container img {
+    width: 35px;
+    margin: 0 10px 0 10px;
+}
+
+
+
+/***** КАТАЛОГ АКТЁРОВ ******/
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.actor_card {
+    overflow: hidden;
+    padding: 0;
+    width: 25%;
+    position: relative;
+    transition: .5s;
+}
+
+.actor_card:hover {
+    background-position: 100% 100%;
+}
+
+.actor_card:hover .actor_card_img {
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(0, 0, 0, 0.5620448863139005) 44%, rgba(0, 0, 0, 0) 100%);
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+
+.actor_card:hover .actor_card_name p {
+    font-size: 35px;
+    opacity: 1;
+}
+
+.actor_card_img img {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+    box-sizing: border-box;
+}
+
+.actor_card_img {
+    filter: grayscale(1);
+    transition: .2s;
+    z-index: 1;
+}
+
+
+.actor_card_name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    height: 30%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7021009087228641) 0%, rgba(0, 0, 0, 0.6264706566220238) 28%, rgba(0, 0, 0, 0.37156869583771013) 66%, rgba(0, 0, 0, 0) 100%);
+}
+
+.actor_card_name p {
+    font-size: 30px;
+    font-family: 'Baron Neue Regular', sans-serif;
+    opacity: .5;
+    transition: .2s;
+}
+
+
+
+/***** СТРАНИЦА АКТЁРА *****/
+main.main {
+    flex-grow: 1;
+}
+
+
+/* Блок с именем актёра (заголовок страницы) */
+.name_container {
+    display: flex;
+    width: 100vw;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.91), rgba(0, 0, 0, 0.65), 67%, transparent);
+    z-index: 3;
+}
+
+
+/* Текст имени актёра (заголовок страницы) */
+.actors_name {
+    font-size: 45px;
+    font-family: 'Murs Gothic';
+}
+
+
+
+
+/***** БЛОК С ФОТОГРАФИЯМИ *****/
+/* Галерея фотографий актёра */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+
+/* Контейнер фотографии */
+.actor_card_photo {
+    width: 50%;
+}
+
+.actor_card_photo img {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+    box-sizing: border-box;
+}
+
+
+
+/***** ИНФОРМАЦИОННЫЙ БЛОК *****/
+/* Родительский контейнер с информацией об актёре */
+.information {
+    width: 50%;
+}
+
+
+/* Дочерний контейнер с информацией об актёре */
+.actors_inf {
+    display: flex;
+    width: 85%;
+    flex-direction: column;
+    margin: 0 auto 0 auto;
+    position: sticky;
+    top: 12vh;
+    z-index: 2;
+}
+
+
+/* Заголовок пункта информации */
+.inf_title,
+.inf_title-video {
+    font-family: 'Baron Neue Black', sans-serif;
+    color: #309BBF;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+
+/* Текст под заголовком пункта информации */
+.inf_text {
+    font-family: 'Barlow', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+
+/* Кнопка на ютуб */
+.button {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 200px;
+    height: 40px;
+    border: 3px solid #FF3D00;
+    border-radius: 50px;
+    transition: 0.3s;
+    justify-content: center;
+}
+
+:hover.button {
+    background-color: #FF3D00;
+}

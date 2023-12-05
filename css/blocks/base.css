@@ -1,0 +1,76 @@
+/***** ШРИФТЫ *****/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+@font-face {
+    font-family: 'Murs Gothic';
+    src: url(../../fonts/mursgothic-widedark.otf);
+}
+@font-face {
+    font-family: 'Baron Neue Regular';
+    src: url(../../fonts/Baron\ Neue.otf);
+}
+@font-face {
+    font-family: 'Baron Neue Bold';
+    src: url(../../fonts/Baron\ Neue\ Bold.otf);
+}
+@font-face {
+    font-family: 'Baron Neue Black';
+    src: url(../../fonts/Baron\ Neue\ Black.otf);
+}
+
+
+/***** ОСНОВНЫЕ ТЕГИ *****/
+html {
+    font-size: 30px;
+    block-size: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+body{
+    background-color: #000000;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
+ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+img {
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
+figure {
+    margin: 0;
+}
+

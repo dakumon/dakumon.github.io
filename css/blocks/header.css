@@ -1,0 +1,153 @@
+/***** КОМПЬЮТЕРНАЯ ШАПКА *****/
+
+/* Кнопки в шапке */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 0.1;
+}
+
+li {
+    padding: 0px 15px 0px 15px;
+    margin: 0;
+    font-size: 22px;
+    font-family: 'Baron Neue Regular', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Лого */
+.header__logo-pic {
+    width: 180px;
+}
+
+.container__head {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+/***** МОБИЛЬНАЯ ШАПКА *****/
+
+.container_mobile nav{
+    width: 100%;
+}
+
+.container_mobile{
+    display: none;
+    position: relative;
+    justify-content: flex-end;
+    z-index: 5;
+    padding-bottom: 20px;
+}
+
+
+
+/* Кнопка-бургер */
+.menu-btn{
+    overflow: hidden;
+    width: 30px;
+    height: 50px;
+    position: absolute;
+
+    z-index: 4;
+    padding: 40px 70px 0px 0px;
+}
+
+.menu-btn.active{
+    position: fixed;
+}
+
+.menu-btn span{
+    width: 40px;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    transition: all .3s;
+}
+
+.menu-btn span:nth-of-type(2){
+    top: calc(50% - 10px);
+}
+
+.menu-btn span:nth-of-type(3){
+    top: calc(50% + 10px);
+}
+
+/* Кнопка-бургер после нажатия */
+.menu-btn.active span:first-of-type{
+    opacity: 0;
+    transition: 0.1s;
+}
+
+.menu-btn.active span:nth-of-type(2){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.menu-btn.active span:nth-of-type(3){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+
+/* Основной блок всплывающего меню */
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 380px;
+    padding: 15px;
+    background-color: #081D24;
+    transform: translateY(-200%);
+    transition: transform 0.7s;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu.active{
+    transform: translateY(0);
+    position: fixed;
+}
+
+
+
+/* Кнопки всплывающего меню */
+.menu li{
+    list-style-type: none;
+    padding: 30px 0px 20px 0px;
+}
+
+
+/* Лого */
+.logo_pic{
+    margin-right: auto;
+    width: fit-content;
+    padding: 30px 0px 0px 15px;
+}
+
+.menu li:first-child{
+    margin-right: auto;
+    width: fit-content;
+    padding: 15px 0px 15px 0px
+}
+
+.container_mobile .header__logo-pic{
+    width: 150px
+}

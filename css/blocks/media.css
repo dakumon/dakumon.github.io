@@ -1,0 +1,300 @@
+/* АДАПТИВ */
+
+@media(max-width: 1280px){
+    /* Главная страница - контакты */
+    .contacts_content{
+        margin: 13% 0 13% 0;
+    }
+
+    .contacts_img img{
+        max-width: 360px;
+    }
+
+    .contacts_title{
+        font-size: 35px;
+        margin-bottom: 2ы5px;
+    }
+
+    .contacts_inf_title{
+        font-size: 30px;
+    }
+
+    .contacts_inf p{
+        font-size: 20px;
+    }
+
+
+    /* Каталог актёров */
+    .actor_card_name p{
+        font-size: 25px;
+    }
+
+    .actor_card:hover .actor_card_name p{
+        font-size: 27px;
+        opacity: 1;
+    }
+
+    .name_container{
+        height: 75px;
+        align-items: center;
+    }
+
+
+    /* Страница актёра */
+    .actors_name{
+        font-size: 36px;
+    }
+
+    .inf_title{
+        font-size: 24px;
+    }
+    
+    .inf_text{
+        font-size: 19px;
+    }
+
+}
+
+
+@media(max-width: 900px){
+    .left_actors_btn_bg, .right_actors_btn_bg{
+        display: none;
+    }
+
+    .actors_btns{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left_actors_btn_container, .right_actors_btn_container{
+        height: 40%;
+        width: 100%;
+    }
+
+    .left_btn{
+        align-self: flex-end;
+        margin-bottom: -20px;
+        transition: .3s;
+    }
+    
+    .right_btn{
+        align-self: flex-start;
+        margin-top: 120px;
+        transition: .3s;
+    }
+
+    .left_btn:hover{
+        font-size: 40px;
+    }
+
+    .right_btn:hover{
+        font-size: 40px;
+    }
+
+    /* Главная страница - контакты */
+    .contacts_inf{
+        padding: 0;
+        text-align: center;
+    }
+
+    .contacts_address_container div{
+        justify-content: center;
+    }
+
+    .contacts_content{
+        flex-direction: column;
+        margin: 4% 0 4% 0;
+    }
+
+
+    .contacts_img{
+        width: 100%;
+        margin: 0 5% 1% 5%;
+    }
+
+    .contacts_inf{
+        width: 100%;
+        margin: 0 20% 0 20%;
+    }
+
+    .contacts_title{
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .contacts_inf_title{
+        font-size: 27px;
+        text-align: center;
+    }
+
+    .contacts_inf p{
+        font-size: 17px;
+    }
+
+
+    /* Каталог актёров */
+    .actor_card{
+        width: 50%;
+    }
+
+    .actor_card_name p{
+        font-size: 30px;
+    }
+
+    .actor_card:hover .actor_card_name p{
+        font-size: 35px;
+        opacity: 1;
+    }
+
+
+    /* Страница актёра */
+    .gallery{
+        flex-wrap:wrap;
+        width: 100%;
+    }
+
+    .name_container{
+        align-items: center;
+    }
+
+    .actors_name{
+        font-size: 38px;
+    }
+
+    .information{
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .actor_card_photo{
+        width: 50%;
+    }
+
+    .actors_inf{
+        width: 85%;
+    }
+
+    .inf_title-video{
+        align-self: center;
+    }
+
+    .button{
+        align-self: center;
+    }
+
+    .container_mobile{
+        display: flex;
+    }
+
+    .container__head{
+        display: none;
+    }
+}
+
+
+@media(max-width: 600px){
+    /* Главная страница - контакты */
+    .contacts_img img{
+        max-width: 320px;
+        margin-bottom: 5%;
+    }
+
+    .contacts_content{
+        margin: 9% 0 9% 0;
+    }
+
+    .contacts_address_container a{
+        font-size: 20px;
+    }
+
+    /* Каталог актёров */
+    .actor_card_name p{
+        font-size: 24px;
+        width: 90%;
+    }
+
+    .actor_card:hover .actor_card_name p{
+        text-align: center;
+        font-size: 27px;
+        opacity: 1;
+    }
+
+
+    /* Страница актёра */
+    .name_container{
+        text-align: center;
+    }
+
+    .actors_name{
+        font-size: 34px;
+    }
+
+    .inf_title{
+        font-size: 20px;
+    }
+    
+    .inf_text{
+        font-size: 18px;
+    }
+
+    .actors_inf{
+        width: 80%;
+        margin: 0 auto 0 auto;
+    }
+}
+
+@media(max-width: 400px){
+    /* Каталог актёров */
+    .wrapper{
+        flex-direction: column;
+    }
+
+    .actor_card{
+        width: 100%;
+    }
+
+    .actor_card_name p{
+        font-size: 27px;
+    }
+
+    .actor_card:hover .actor_card_name p{
+        font-size: 30px;
+        opacity: 1;
+    }
+
+
+    /* Контакты */
+    .contacts_img{
+        width: 90%;
+        margin: 0 5% 1% 5%;
+    }
+
+    .contacts_inf{
+        width: 100%;
+        margin: 0 20% 0 20%;
+    }
+
+    .contacts_title{
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .contacts_inf_title{
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .contacts_inf p{
+        font-size: 15px;
+    }
+
+    .contacts_address_container a{
+        font-size: 18px;
+    }
+
+     /* Страница актёра */
+     .name_container{
+        height: 105px;
+        text-align: center;
+    }
+}
